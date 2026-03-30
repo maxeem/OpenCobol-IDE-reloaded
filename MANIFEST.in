@@ -1,0 +1,23 @@
+#
+# MANIFEST.in
+#
+# Manifest template for creating the OpenCobolIDE source distribution.
+global-exclude *.pyc
+include MANIFEST.in
+include setup.py
+include LICENSE
+include *.rst
+include *.txt
+include *.cfg
+include *.py
+include *.pyw
+include *.ini
+include *.in
+include .coveragerc
+include .gitmodules
+recursive-include test *
+recursive-include forms *
+recursive-include share *
+recursive-include doc *
+recursive-include scripts *
+recursive-include open_cobol_ide/extlibs *
