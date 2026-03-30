@@ -526,8 +526,7 @@ class GnuCobolCompiler(QtCore.QObject):
         options.append('-o')
         options.append(os.path.join(output_dir, output_file_name))
         if GnuCobolStandard(settings.cobol_standard) != GnuCobolStandard.none:
-            options.append('-std=%s' % str(settings.cobol_standard).replace(
-                'GnuCobolStandard.', ''))
+            options.append('-std=%s' % GnuCobolStandard(settings.cobol_standard).name)
         options += settings.compiler_flags
         if settings.free_format:
             options.append('-free')
